@@ -1,0 +1,22 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "Add Department";
+    Layout = "_AdvancedLayout";
+
+}
+
+<form method="post" asp-action="SaveAdd" asp-controller="Department">
+    <div>
+        <label>Name</label>
+		<input type="text" name="Name" value="@Model?.Name" id="Name" class="form-control"/>
+
+        <label>Manager Name</label>
+        <input type="text" name="ManagerName" value="@Model?.ManagerName" id="ManagerName" class="form-control" />
+
+        <div class="mt-3">
+            <input type="submit" value="Create" class="btn btn-success" />
+            <a asp-action="Index" asp-controller="Department" class="btn btn-secondary">Go Back</a>
+        </div>
+    </div>    
+</form>
+
